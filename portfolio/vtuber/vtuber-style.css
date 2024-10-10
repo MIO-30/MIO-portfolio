@@ -1,0 +1,831 @@
+:root {
+    --pink: #ffb2ec;
+    --blue: #abc6f3;
+    --purple: #85778a;
+    --light-purple: #e0cfe6;
+    --v1: #a31b83;
+    --v2: #ffd027;
+    --v3: #6aecdf;
+    --v4: #ff7285;
+    --font-kaisei: "Kaisei Opti";
+    --font-mplus1: "M PLUS 1p";
+    --font-kosugi: "Kosugi Maru";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: "Kosugi Maru",  "M PLUS 1p","Kaisei Opti", sans-serif ;  
+    font-size: 16px;
+    color: black;
+    /* 背景水玉 ==========================================   */
+    background-color: #fff ;
+    background-image: radial-gradient(var(--light-purple) 10%, transparent 10%), radial-gradient(var(--light-purple) 10%, transparent 10%);
+    background-size: 40px 40px;
+    background-position: 0 0, 20px 20px;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    transition: all 0.3s;
+}
+
+
+/* 
+h2 
+=========================*/
+.h2-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: baseline;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    display: inline;
+    font-family: var(--font-mplus1);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    text-shadow: 0px 0px 5px var(--purple);
+    padding-right: 2rem;
+    opacity: 0;
+}
+.h2-flex p {
+    display: inline;
+    font-size: 18px;
+    font-family: var(--font-kosugi);
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0px 0px 5px var(--purple);
+    opacity: 0;
+}
+.h2-flex .black {
+    color: #000;
+}
+
+.h2line {
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(90deg, #fff, #fff 50%, #00000000 50%, #00000000);
+    background-size: 200% 100%;
+    background-position: 0% 100%;
+    margin-bottom: 30px;
+    opacity: 0;
+}
+.blackline {
+    background-image: linear-gradient(90deg, #000000, #000000 50%, #00000000 50%, #00000000);
+
+}
+
+
+/* 
+ボタン 
+============================*/
+.btn {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    font-weight: 600;
+    font-family: var(--font-mplus1);
+    padding: 10px 50px 10px 30px;
+    border-radius: 50px;
+    text-shadow: 0px 0px 5px var(--purple);
+    box-shadow: 0px 0px 5px var(--purple);
+    position: relative;
+    transition: all 0.5s;
+    margin: 40px 0 80px 0;
+}
+a:hover .btn {
+    background-color: #ff40af;
+    color: #fff;
+}
+
+.btn:before {
+    position: absolute;
+    content: '';
+    top: 45%;
+    right: 15%;
+	width: 10px;
+	height: 10px;
+	border-top: 3px solid #000;
+	border-right:3px solid #000;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg) translate(-50%, 0%);
+    transition: all 0.3s;
+}
+a:hover .btn:before {
+    right: 10%;
+	border-top: 3px solid #fff;
+	border-right:3px solid #fff;
+}
+
+
+/* 
+背景 範囲 
+ ==========================================*/
+.grad {
+    background: url(img/back.png), linear-gradient(135deg, var(--blue), var(--pink));
+    position: relative;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 20px;
+}
+.cont {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 
+ハンバーガーメニュー
+====================================================== */
+#btn-check {
+    display: none;
+}
+
+/* 
+メニューボタン
+==================================== */
+.menu-btn {
+    content: "";
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, var(--blue) 40%,var(--pink) 60%);
+    background-size: 250%;
+    background-position: 0% 100%;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    display: block;
+    content: "";
+    width: 25px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.3s;
+}
+.menu-btn span:before {
+    top: 10px;
+}
+.menu-btn span:after {
+    bottom: 10px;
+}
+
+#btn-check:checked ~ .menu-btn {
+    background-position: 100% 100%;
+}
+#btn-check:checked ~ .menu-btn span {
+    background-color: #ffffff00;
+}
+#btn-check:checked ~ .menu-btn span:before {
+    transform: rotate(-45deg);
+    top: 0;
+}
+#btn-check:checked ~ .menu-btn span:after {
+    transform: rotate(45deg);
+    bottom: 0;
+}
+
+
+/* 
+メニュー本文
+=================================== */
+.menu-cont {
+    height: 100vh;
+    width: 80%;
+    background-image: linear-gradient(-90deg, #ffffffdf 80%, #ffffff00);
+    padding-top: 3rem;
+    position: fixed;
+    z-index: 999;
+    right: -100%;
+    transition: all 0.5s;
+    font-family: var(--font-kaisei);
+}
+
+.menu-cont ul {
+    margin: 0 auto;
+    width: fit-content;
+}
+.menu-cont p{
+    text-align: left;
+    font-size: 14px;
+}
+.menu-cont p:first-child {
+    font-size: 25px;
+    padding-top: 0.5rem;
+    position: relative;
+    transition: all 0.3s;
+}
+.menu-cont p:first-child::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    background-image: linear-gradient(90deg, var(--blue), var(--pink));
+    top: 1.3rem;
+    left: -1.3rem;
+    transform: rotate(45deg);
+    transition: all 0.3s;
+}
+.menu-cont a:hover p:first-child::before {
+    transform: rotate(-225deg);
+}
+.menu-cont a:hover p{
+    color: var(--purple);
+}
+
+#btn-check:checked ~ .menu-cont {
+    right: 0;
+}
+
+
+/* 
+header 
+====================================================*/
+header {
+    position: fixed;
+    content: '';
+    inset: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(180deg, #fff 75%, #ffffff00);
+    z-index: 9999;
+}
+
+.h-flex {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-kaisei);
+    font-weight: bold;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 img {
+    height: 60px;
+    object-fit: contain;
+}
+
+.h-nav ul {
+    display: flex;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.h-nav a {
+    text-shadow: 0px 0px 5px #fff;
+    margin: 0 0.5rem;
+    background-image: linear-gradient(90deg, var(--blue), var(--pink), #ffffff 70%);
+    background-size: 300% 100%;
+    background-position: 100% 100%;
+    padding: 5px 1rem;
+    border-radius: 50px;
+    transition: all 0.5s;
+}
+
+.h-nav a:hover {
+    color: #fff;
+    text-shadow: 0px 0px 5px var(--purple);
+    background-position: 0% 100%;
+}
+
+
+/* 
+top
+===================================================== */
+#top {
+    margin-top: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#top-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#top-img img {
+    /* height: calc(80vh - 80px); */
+    height: fit-content;
+    width: 80%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    margin: 0 5px;
+}
+
+
+/* 
+about 
+=======================================*/
+.about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.about-flex div {
+    margin: 0 10px;
+}
+.main-text p {
+    text-align: right;
+    font-size: 60px;
+    font-family: var(--font-kaisei);
+    font-weight: bold;
+    letter-spacing: -0.3rem;
+    line-height: 70px;
+    padding-bottom: 1rem;
+}
+.main-text span {
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 0px 0px 2px #fff;
+    transition: all 0.3s;
+    cursor: default;
+}
+.main-text span:hover {
+    text-shadow: 0px 0px 10px #fff;
+}
+
+.about-flex .text p:first-child{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-mplus1);
+}
+
+.about-flex .text p:nth-child(2) {
+    line-height: 30px;
+    margin-top: 1rem;
+}
+.about-flex .text p {
+    text-align: center;
+}
+
+
+/* 
+news 
+==============================================*/
+table {
+    margin: 0 auto;
+    width: 95%;
+    max-width: 800px;
+    font-weight: bold;
+}
+
+th, td {
+    height: 50px;
+    font-size: 20px;
+}
+
+th {
+    font-family: var(--font-mplus1);
+    font-size: 30px;
+}
+th span {
+    font-size: 18px;
+    padding-right: 10px;
+}
+
+td {
+    font-family: var(--font-mplus1);
+    transition: all 0.3s;
+}
+table a:hover {
+    color: #ff40af;
+}
+
+
+/* 
+talent
+===================================== */
+.talent-flex {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.talent-box {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+
+
+/* ひと画像 =============== */
+.talent-img {
+    background-color: #fff;
+    width: 100%;
+    height: 90%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px var(--purple);
+    position: relative;
+}
+.talent-img:before {
+    position: absolute;
+    content: '';
+    top: -100%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(135deg, #00000000, #00000000 40%, #fff, #fff 80%, #00000000 80%, #00000000);
+    z-index: 100;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+a:hover .talent-img:before {
+    animation: shine 0.4s ease-out;
+}
+@keyframes shine {
+    100% {
+        top: 100%;
+    }
+}
+
+.talent-img span {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+a:hover .talent-img span {
+    scale: 1.1;
+}
+
+.img1 span {
+    background-image: url(img/sousaku5.png);
+}
+.img2 span {
+    background-image: url(img/sousaku19.png);
+}
+.img3 span {
+    background-image: url(img/sousaku12-2.png);
+}
+.img4 span {
+    background-image: url(img/sousaku13-2.png);
+}
+
+a:hover .img1 .talent-img {
+    background-color: var(--v1);
+}
+a:hover .img2 .talent-img {
+    background-color: var(--v2);
+}
+a:hover .img3 .talent-img {
+    background-color: var(--v3);
+}
+a:hover .img4 .talent-img {
+    background-color: var(--v4);
+}
+a:hover .talent-img img {
+    scale: 1.1;
+}
+
+/* お名前 ============================= */
+.talent-box p {
+    background-color: #fff;
+    height: 40px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px var(--purple);
+    text-shadow: 0px 0px 5px var(--purple);
+    font-family: var(--font-kosugi);
+    font-weight: bold;
+    transition: all 0.3s;
+    margin: 0.5rem auto;    
+}
+
+a:hover .img1 p {
+    background-color: var(--v1);
+}
+a:hover .img2 p {
+    background-color: var(--v2);
+}
+a:hover .img3 p {
+    background-color: var(--v3);
+}
+a:hover .img4 p {
+    background-color: var(--v4);
+}
+
+a:hover .talent-box p {
+    color: #fff;
+}
+
+
+/* 
+goods 
+========================================*/
+.goods-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.dammyimg {
+    width: 100%;
+    aspect-ratio: 5 / 3;
+}
+.dammyimg img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.goods-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.img-box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-box img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+}
+
+.goods-img .text {
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid #000;
+    display: grid;
+    place-content: center;
+    padding: 10px 0;
+    margin: 0 auto;
+}
+.goods-main {
+    font-family: var(--font-kaisei);
+    font-weight: 800;
+    font-size: 25px;
+
+}
+.goods-main p {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+    background: linear-gradient(to right, var(--blue) 0%, var(--pink) 100%);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 100% 50%;
+}
+
+.goods-sub {
+    margin: 10px auto;
+    font-family: var(--font-mplus1);
+}
+.goods-sub p {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+
+/* 
+audition 
+==========================================*/
+#audition .cont p {
+    padding-top: 1rem;
+}
+
+.audition-img {
+    display: inline-block;
+    margin: 1rem auto;
+    margin-bottom: 3rem;
+    width: 90%;
+    max-width: 700px;
+    aspect-ratio: 5 / 3;
+    border-radius: 10px;
+    background-image: url(img/audition.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.audition-img:before {
+    display: block;
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    z-index: 99;
+    opacity: 0;
+    transition: all 0.3s;
+}
+a:hover .audition-img:before {
+    opacity: 0.3;
+}
+
+
+/* 
+footer 
+===============================================*/
+.f-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    max-width: 1200px;
+    margin: 1rem auto;
+}
+
+.share img {
+    height: 1.5rem;
+    object-fit: contain;
+    margin: 0.3rem 0.2rem;
+}
+
+.guide {
+    width: 70%;
+    min-width: 50px;
+    font-size: 14px;
+}
+.guide a {
+    color: #fff;
+}
+.guide ul {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 50px;
+    box-shadow: 0px 0px 3px var(--purple);
+    background-image: linear-gradient(90deg, var(--blue), var(--pink), #000000 70%);
+    background-size: 300% 100%;
+    background-position: 100% 100%;
+    transition: all 0.5s;
+}
+
+.guide li:hover{
+    background-position: 0% 100%;
+
+}
+
+.guide li:hover a {
+    color: #000;
+}
+
+.f-btn {
+    display: block;
+    text-shadow: 0px 0px 3px var(--purple);
+}
+
+
+
+
+@media screen and (max-width: 850px) {
+    .h-nav {
+        display: none;
+    }
+    .h2-flex {
+        justify-content: center;
+    }
+    h2 {
+        padding-right: 0;
+    }
+    .main-text p {
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .menu-btn {
+        display: flex;
+    }
+    .goods-flex {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .goods-img {
+        grid-template-columns: repeat(1, minmax(90%, 1fr));
+    }
+    .goods-img .text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        border-left: none;
+    }
+    .goods-main {
+        margin: 0 1rem 0.5rem 1rem;
+    }
+    .guide {
+        width: 50%;
+    }
+    .guide ul {
+        display: block;
+    }
+    .guide li {
+        height: 2rem;
+        margin: 0.5rem auto;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .h2-flex {
+        display: block;
+        justify-content: center;
+    }
+    h2 {
+        display: block;
+        padding-right: 0;
+        text-align: center;
+    }
+    .h2-flex p {
+        display: block;
+        padding-bottom: 0.5rem;
+    }
+    .main-text p {
+        text-align: center;
+        font-size: 50px;
+    }
+    .talent-box {
+        width: 100%;
+        height: 60vh;
+        position: relative;
+    }
+    .guide {
+        width: 50%;
+    }
+    .guide ul {
+        display: block;
+    }
+    .guide li {
+        height: 2rem;
+        margin: 0.5rem auto;
+    }
+
+}
