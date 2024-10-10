@@ -1,0 +1,263 @@
+:root {
+    --dot-font: 'DotGothic16', sans-serif;
+    --fontSize-big: 50px;
+    --grey: #3d3d3d;
+    --light-grey: #c7c7c7;
+    --black: #000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    font-family: var(--dot-font);
+    letter-spacing: 0.5rem;
+    color: var(--grey);
+
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey);
+}
+a:hover {
+    color: var(--light-grey);
+}
+
+/* 
+ヘッダー
+=========================================== */
+#sub-header {
+    width: 100%;
+    height: 100px;
+}
+h2 {
+    font-size: 30px;
+    opacity: 0;
+}
+.sub-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.sub-title a {
+    display: block;
+    font-weight: bold;
+    padding-left: 0px;
+    position: relative;
+    opacity: 0;
+}
+.sub-title a:before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: var(--grey) 2px solid;
+    border-left: var(--grey) 2px solid;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    margin-right: 5px;
+}
+.sub-title a:hover:before {
+    border-top: var(--light-grey) 2px solid;
+    border-left: var(--light-grey) 2px solid;
+}
+
+#sub-header p {
+    font-size: 14px;
+    text-align: right;
+    padding-top: 0.5rem;
+    letter-spacing: 0;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, var(--grey)50%, #fff 50%);
+    background-size: 200%;
+    opacity: 0;
+}
+
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    height: calc(100vh - 100px);
+}
+
+/* 
+プレビュー
+===================================== */
+#preview {
+    width: 50%;
+    height: calc(100% - 10px);
+    background-color: #c0c0c0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
+#preview img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    position: relative;
+}
+
+.cover {
+    background-color: #ffffff;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 999;
+}
+
+/* 
+サムネ
+=================================== */
+#thumbList {
+    overflow: hidden scroll;
+    width: 40%;
+    height: 100%;
+    margin-left: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    justify-content: center;
+    padding-right: 10px;
+    opacity: 0;
+}
+#thumbList::-webkit-scrollbar {
+    display: none;
+}
+
+.listImg {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    opacity: 0;
+    border: none;
+}
+
+/* 
+説明ウィンドウ
+================================= */
+#img-window {
+    position: fixed;
+    content: '';
+    bottom: -280px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 95%; 
+    height: 180px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 3px solid var(--grey);
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.img-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: 3.5rem;
+    padding: 0 2rem;
+    border-radius: 10px;
+    border: 3px solid var(--grey);
+    background-color: #fff;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    font-weight: bold;
+}
+
+#img-window button {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    border: 3px solid var(--grey);
+    background-color: #fff;
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+span.x,
+span.x:before {
+    display: inline-block;
+    content: "";
+    width: 20px;
+    height: 2px;
+    background-color: var(--grey);
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(45deg);
+    top: 50%;
+    left: 50%;
+}
+span.x:before {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* 
+text
+====================================== */
+#win-grig {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 33px 10px 10px 30px;
+}
+
+.win-text1 {
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+}
+li {
+    list-style: none;
+    position: relative;
+}
+ul {
+    margin-bottom: 0.5rem;
+}
+.cursor {
+    position: absolute;
+    left: 10px;
+    top: 33px;
+}
+.cursor-ori {
+    top: 57px;
+}
+
+.win-text2 {
+    overflow: hidden auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--grey) #ffffff00;
+    padding: 0 15px;
+    letter-spacing: 0.3rem;
+}

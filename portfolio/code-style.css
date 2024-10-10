@@ -1,0 +1,154 @@
+:root {
+    --dot-font: 'DotGothic16', sans-serif;
+    --fontSize-big: 50px;
+    --grey: #3d3d3d;
+    --light-grey: #c7c7c7;
+    --black: #000;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 100%;
+    font-family: var(--dot-font);
+    letter-spacing: 0.5rem;
+    color: var(--grey);
+    width: 100%;
+    overflow: hidden scroll;
+}
+
+a {
+    text-decoration: none;
+    color: var(--grey);
+}
+a:hover {
+    color: var(--light-grey);
+}
+
+
+/* 
+ヘッダー
+=========================================== */
+#sub-header {
+    width: 100%;
+    height: 100px;
+}
+h2 {
+    font-size: 30px;
+    opacity: 0;
+}
+.sub-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.sub-title a {
+    display: block;
+    font-weight: bold;
+    padding-left: 0px;
+    position: relative;
+    opacity: 0;
+}
+.sub-title a:before {
+    display: inline-block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-top: var(--grey) 2px solid;
+    border-left: var(--grey) 2px solid;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    left: -0.5rem;
+    top: 50%;
+    margin-right: 5px;
+}
+.sub-title a:hover:before {
+    border-top: var(--light-grey) 2px solid;
+    border-left: var(--light-grey) 2px solid;
+}
+
+#sub-header p {
+    font-size: 14px;
+    text-align: right;
+    padding-top: 0.5rem;
+    letter-spacing: 0;
+    width: 90%;
+    max-width: 1500px;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-image: linear-gradient(90deg, var(--grey)50%, #fff 50%);
+    background-size: 200%;
+    opacity: 0;
+}
+
+/* 
+本文
+======================================= */
+.grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+}
+
+
+/* 
+grid-box 
+===========================================*/
+.grid-box {
+    /* background-color: aqua; */
+    padding: 0.7rem;
+    border-radius: 10px;
+    height: 250px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px #fff;
+    transition: all 0.3s;
+    opacity: 0;
+}
+.grid-box:hover {
+    box-shadow: 0px 0px 5px var(--grey);
+}
+
+
+.boxImg {
+    /* background-color: #ba5757; */
+    width: 280px;
+    aspect-ratio: 5 / 3;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s;
+}
+.vtuber {
+    background-image: url(img/audition.jpg);
+}
+.aquarium {
+    background-image: url(img/kurage.jpg);
+}
+.portfolio {
+    background-image: url(img/index-design.jpg);
+}
+a:hover .boxImg {
+    scale: 1.05;
+}
+.grid-box p {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-top: 1.5rem;
+    font-size: 14px;
+}
