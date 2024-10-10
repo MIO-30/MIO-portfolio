@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>よこはま水族館</title>
+    <meta name="description" content="横浜駅から徒歩XX分にある『よこはま水族館』。人気のイルカショーやペンギンのお散歩、ナイトアクアリウムなど楽しいイベントが盛りだくさん! XX種類の海の生き物があなたをお迎えします。">
+    <!-- フォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;300;400;500;700;800;900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <!-- スタイルシート -->
+    <link rel="stylesheet" href="aquarium-style.css">
+
+</head>
+<body>
+
+<header>
+
+    <div class="h-flx">
+        <h1>
+            <div class="logo">
+                <img src="img/logo.png" alt="よこはま水族館ロゴ">
+            </div>
+        </h1>
+        <nav class="h-nav">
+            <ul>
+                <li><a href="" class="nav-icon"><img src="img/icon/hitode.png" alt="ヒトデのアイコン">
+                    <p>フロアマップ</p></a></li>
+                <li><a href="" class="nav-icon"><img src="img/icon/time.png" alt="時計のアイコン">
+                    <p>タイムスケジュール</p></a></li>
+                <li><a href="" class="nav-icon"><img src="img/icon/ticket.png" alt="チケットのアイコン">
+                    <p>営業・料金案内</p></a></li>
+                <li><a href="" class="nav-icon"><img src="img/icon/access.png" alt="マップのピンのアイコン">
+                    <p>アクセス</p></a></li>
+                <li><a href="" class="nav-icon"><img src="img/icon/info.png" alt="インフォメーションのアイコン">
+                    <p>お知らせ</p></a></li>
+            </ul>
+        </nav><!-- h-nav -->
+
+        <!-- ------ハンバーガーメニュー------ -->
+        <div class="menu-display"><!-- スマホ以外非表示 -->
+
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="menu-btn"><span></span></label>
+
+        <!-- -------メニュー内容--------- -->
+        <div class="menu-cont">
+
+            <div class="share-flx">
+    
+                <a href=""><img src="img/icon/X.png" alt="Xのアイコン" class="xicon"><a>
+                <a href=""><img src="img/icon/insta.png" alt="インスタグラムのアイコン"><a>
+                <a href=""><img src="img/icon/fb.png" alt="facebookのアイコン"><a>
+                <a href=""><img src="img/icon/line.png" alt="LINEのアイコン" class="instaicon"><a>
+        
+            </div><!-- share-flx -->
+    
+            <nav><ul>
+                <a href=""><li class="menu-tab">
+                    <img src="img/icon/hitode.png" alt="ヒトデのアイコン">
+                    <p>フロアマップ<p>
+                </li></a>
+    
+                
+                <a href=""><li class="menu-tab">
+                    <img src="img/icon/time.png" alt="時計のアイコン">
+                    <p>タイムスケジュール<p>
+                </li></a>
+                <input type="checkbox" id="event-check">
+                <label for="event-check" class="menu-cont-btn"><span></span></label>
+    
+                <div class="event-menu">
+                    <a href=""><li>イルカショー</li></a>
+                    <a href=""><li>ペンギンさんのお散歩</li></a>
+                    <a href=""><li>うみのいきもの紹介</li></a>
+                    <a href=""><li>ナイトアクアリウム</li></a>
+                </div><!--  event-menu-->
+    
+    
+                <a href=""><li class="menu-tab">
+                    <img src="img/icon/ticket.png" alt="チケットのアイコン">
+                    <p>営業・料金案内<p>
+                </li></a>
+                <input type="checkbox" id="price-check">
+                <label for="price-check" class="menu-cont-btn"><span></span></label>
+    
+                <div class="price-menu">
+                    <a href=""><li>営業時間</li></a>
+                    <a href=""><li>入場料金</li></a>
+                    <a href=""><li>年間パスポート</li></a>
+                    <a href=""><li>団体でお越しの方</li></a>
+                </div><!--  event-menu-->
+    
+    
+                <a href=""><li class="menu-tab">
+                    <img src="img/icon/access.png" alt="マップのピンのアイコン">
+                    <p>アクセス<p>
+                </li></a>
+    
+    
+                <a href=""><li class="menu-tab">
+                    <img src="img/icon/info.png" alt="インフォメーションのアイコン">
+                    <p>お知らせ</p>
+                </li></a>
+    
+    
+                <a href=""><li class="menu-tab t2">
+                    <p>よくある質問<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>お問い合わせ<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>採用情報<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>サイトマップ<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>このサイトについて<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>プライバシーポリシー<p>
+                </li></a>
+                <a href=""><li class="menu-tab t2">
+                    <p>会社概要<p>
+                </li></a>
+    
+            </ul></nav>
+    
+        </div><!-- menu-cont -->
+    
+        </div><!-- 非表示 -->
+
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 25" width="100%">
+            <path d="M 0 5 Q 16 5 32 15 Q 64 35 96 15 Q 112 5 128 5 Q 144 5 160 15 Q 192 35 224 15 Q 240 5 256 5 Q 272 5 288 15 Q 320 35 352 15 Q 368 5 384 5 Q 400 5 416 15 Q 448 35 480 15 Q 496 5 512 5 Q 528 5 544 15 Q 576 35 608 15 Q 624 5 640 5 Q 656 5 672 15 Q 704 35 736 15 Q 752 5 768 5 Q 784 5 800 15 Q 832 35 864 15 Q 880 5 896 5 Q 912 5 928 15 Q 960 35 992 15 Q 1008 5 1024 5 Q 1040 5 1056 15 Q 1088 35 1120 15 Q 1136 5 1152 5 Q 1168 5 1184 15 Q 1216 35 1248 15 Q 1264 5 1280 5 L 1280 0 L 0 0 Z" fill="#fff"></path>
+          </svg>
+
+</header>
+
+<a href="#"><img src="img/icon/maru.png" alt="topへ戻るボタン" class="top-back"></a>
+
+
+<div class="top">
+
+    <div class="main-img">
+        <img src="img/kurage.jpg" alt="くらげの世界展のバナー">
+
+        <div class="mainimg-bottom"><!-- なみなみ -->
+            <div class="roop-relative">
+
+            <div class="roop r1">
+                <img src="img/nami.png" class="nami1" alt="波型の装飾">
+                <img src="img/nami.png" class="nami1" alt="波型の装飾">
+                <img src="img/nami.png" class="nami1" alt="波型の装飾">
+            </div>
+        
+            <div class="roop r2">
+                <img src="img/nami.png" class="nami2" alt="波型の装飾">
+                <img src="img/nami.png" class="nami2" alt="波型の装飾">
+                <img src="img/nami.png" class="nami2" alt="波型の装飾">
+            </div>
+        
+            <div class="roop r3">
+                <img src="img/nami.png" class="nami3" alt="波型の装飾">
+                <img src="img/nami.png" class="nami3" alt="波型の装飾">
+                <img src="img/nami.png" class="nami3" alt="波型の装飾">
+            </div>
+            </div><!-- roop-relative -->
+        </div><!-- mainimg-bottom -->
+
+    </div><!-- mainimg -->
+
+    <div class="today-info cont-L">
+
+        <div class="info-box i-time">
+            <div class="info-th">
+                <img src="img/icon/time2.png" alt="時計のアイコン">
+                <p>本日の営業時間</p>
+            </div>
+            <div class="info-td">
+            <p class="b-txt">10:00 ~ 20:00</p>
+            </div>
+        </div>
+
+        <div class="info-box i-event">
+            <div class="info-th">
+                <img src="img/icon/iruka.png" alt="イルカのアイコン">
+                <p>本日のイベント</p>
+            </div>
+            <div class="info-td">
+            <p>ペンギンさんのお散歩</p>
+            <p class="b-txt">12:00 ~</p>
+            </div>
+        </div>
+
+        <div class="info-box i-ticket">
+            <div class="info-th">
+                <img src="img/icon/ticket.png" alt="チケットのアイコン">
+                <p>当日券のご案内</p>
+            </div>
+            <div class="info-td">
+            <p class="b-txt">販売中</p>
+            <p><a href="">ご購入はこちらから▶</a></p>
+            </div>
+        
+        </div>
+
+    </div><!-- today-info -->
+
+</div><!-- top -->
+
+<main>
+
+<section id="news">
+<div class="news">
+
+    <h2>NEWS</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">ニュース</p>
+
+    <div class="cont">
+
+    <li><a href=""><time>2024.08.01</time>年間パスポート販売開始しました！</a></li>
+    <li><a href=""><time>2024.07.01</time>XX月XX日～XX月XX日の営業時間について</a></li>
+    <li><a href=""><time>2024.06.01</time>XXXのお客様へ XXXのお知らせ</a></li>
+
+    <a href=""><P class="btn">ニュースの一覧を見る</P></a>
+
+    </div><!--  cont-->
+
+</div>
+</section><!-- news -->
+
+<section id="topics">
+<div class="topics">
+
+    <h2>TOPICS</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">トピックス</p>
+
+    <div class="cont-L">
+
+    <div class="topics-flx">
+
+        <div class="topics-box"><a href="">
+            <img src="img/kurage.jpg" alt="くらげの世界展のバナー">
+            <p>8月1日～ 新オープン！<br>『くらげの世界展』</p>
+        </a></div><!-- topics-box -->
+
+        <div class="topics-box"><a href="">
+            <img src="img/nettaigyo.jpg" alt="熱帯魚特集のバナー">
+            <p>8月は熱帯魚特集！<br>かわいいおさかなの生態を詳しく解説！</p>
+        </a></div><!-- topics-box -->
+
+        <div class="topics-box"><a href="">
+            <img src="img/pengin.jpg" alt="ペンギンさんのお散歩のバナー">
+            <p>当館人気イベント<br>ペンギンのお散歩に密着しました！</p>
+        </a></div><!-- topics-box -->
+
+    </div><!-- topics-flx -->
+
+    <a href=""><P class="btn">トピックスの一覧を見る</P></a>
+
+    </div><!--  cont-L-->
+
+</div>
+</section><!-- topics -->
+
+<section id="event">
+<div class="event">
+
+    <h2>EVENT</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">イベント</p>
+
+    <div class="cont-L">
+
+
+    <div class="event-flx">
+
+        <div class="event-box"><a href="">
+            <div class="event-img">
+                <img src="img/iruka.jpg" alt="イルカの画像">
+            </div>
+            <p class="event-th">イルカショー<p>
+            <p class="event-time">各回15分</p>
+        </a></div><!-- event-box -->
+
+        <div class="event-box"><a href="">
+            <div class="event-img">
+                <img src="img/pengin2.jpg" alt="ペンギンの画像">
+            </div>
+            <p class="event-th">ペンギンさんのお散歩<p>
+            <p class="event-time">各回15分</p>
+        </a></div><!-- event-box -->
+
+        <div class="event-box"><a href="">
+            <div class="event-img">
+                <img src="img/ei.jpg" alt="水槽とエイの画像">
+            </div>
+            <p class="event-th">うみのいきもの紹介<p>
+            <p class="event-time">各回10分</p>
+        </a></div><!-- event-box -->
+
+        <div class="event-box"><a href="">
+            <div class="event-img">
+                <img src="img/night.jpg" alt="紫のライトが当たる水槽の画像">
+            </div>
+            <p class="event-th">ナイトアクアリウム<p>
+            <p class="event-time">18:00～</p>
+        </a></div><!-- event-box -->
+
+    </div><!-- event-flx -->
+
+    <a href=""><P class="btn">イベントスケジュールを見る</P></a>
+
+    </div><!-- cont-L -->
+
+</div>
+</section><!-- event -->
+
+<section id="map">
+<div class="map">
+
+    <h2>FLOOR MAP</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">フロアマップ</p>
+
+    <div class="cont">
+
+    <div class="map-flx">
+
+        <img src="img/map1.png" alt="一階のフロアマップの画像">
+        <img src="img/f1.jpg" alt="イルカ、エイ、魚の群れ、ペンギンの画像">
+
+    </div><!-- map-flx -->
+
+    <div class="map-flx">
+
+        <img src="img/f2.jpg" alt="熱帯魚、くらげ、黄色いハゼの画像">
+        <img src="img/map2.png" alt="二階のフロアマップの画像">
+
+    </div><!-- map-flx -->
+
+    <a href=""><P class="btn">フロアマップ・展示案内を見る</P></a>
+
+    </div><!-- cont -->
+
+</section><!-- map -->
+
+<section id="price">
+<div class="price">
+
+    <h2>PRICE</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">料金</p>
+
+    <div class="cont">
+
+    <li><span class="old">大人・高校生以上</span><span class="old-price">1500円（税込）</span></li>
+    <li><span class="old">小・中学生</span><span class="old-price">800円（税込）</span></li>
+    <li><span class="old">幼児（4才以上）</span><span class="old-price">300円（税込）</span></li>
+    <li><span class="old">シルバー（65才以上）</span><span class="old-price">1200円（税込）</span></li>
+
+    <a href="">
+        <img src="img/nenpass.png" alt="年間パスポートの画像">
+    </a>
+
+    <div class="price-flx">
+        <div class="p-btn"><a href=""><P class="btn">団体でお越しの方</P></a></div>
+        <div class="p-btn"><a href=""><P class="btn b2">料金詳細を見る</P></a></div>
+    </div><!-- price-flx -->
+    
+    </div><!-- cont -->
+
+</div>
+</section><!-- price -->
+
+<section id="access">
+<div class="access">
+
+    <h2>ACCESS</h2>
+    <div class="h2-line"></div>
+    <p class="h2-p">アクセス</p>
+
+    <div class="cont">
+
+    <div class="access-flx">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25996.38461904265!2d139.58601311083984!3d35.46598109999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c0df6cfd2f1%3A0xbbbca6f36b5235f5!2z5qiq5rWc6aeF!5e0!3m2!1sja!2sjp!4v1724897393335!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <div class="access-txt">
+
+            <table>
+                <tr>
+                    <th>住所</th>
+                    <td>〒220-XXXX 神奈川県横浜市西区北幸 XXX-X</td>
+                </tr>
+                <tr>
+                    <th>電話番号</th>
+                    <td>0454-XX-XXXX</td>
+                </tr>
+                <tr>
+                    <th>アクセス</th>
+                    <td>XX線横浜駅XX口から 徒歩XX分</td>
+                </tr>
+            </table>
+
+        </div><!-- access-txt -->
+
+    </div><!-- access-flx -->
+
+    </div><!-- cont -->
+
+</div>
+</section><!-- access -->
+
+</main>
+
+<footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 25" width="100%">
+    <path d="M 0 5 Q 16 5 32 15 Q 64 35 96 15 Q 112 5 128 5 Q 144 5 160 15 Q 192 35 224 15 Q 240 5 256 5 Q 272 5 288 15 Q 320 35 352 15 Q 368 5 384 5 Q 400 5 416 15 Q 448 35 480 15 Q 496 5 512 5 Q 528 5 544 15 Q 576 35 608 15 Q 624 5 640 5 Q 656 5 672 15 Q 704 35 736 15 Q 752 5 768 5 Q 784 5 800 15 Q 832 35 864 15 Q 880 5 896 5 Q 912 5 928 15 Q 960 35 992 15 Q 1008 5 1024 5 Q 1040 5 1056 15 Q 1088 35 1120 15 Q 1136 5 1152 5 Q 1168 5 1184 15 Q 1216 35 1248 15 Q 1264 5 1280 5 L 1280 0 L 0 0 Z" fill="#ffffff"></path>
+    </svg>
+
+
+    <div class="share-flx">
+
+        <a href=""><img src="img/icon/X.png" alt="Xのアイコン" class="xicon"><a>
+        <a href=""><img src="img/icon/insta.png" alt="インスタグラムのアイコン"><a>
+        <a href=""><img src="img/icon/fb.png" alt="facebookのアイコン"><a>
+        <a href=""><img src="img/icon/line.png" alt="LINEのアイコン" class="instaicon"><a>
+
+    </div><!-- share-flx -->
+
+    <nav class="f-nav">
+        <ul>
+        <li><a href="">よくある質問</a></li>
+        <li><a href="">お問い合わせ</a></li>
+        <li><a href="">採用情報</a></li>
+        <li><a href="">サイトマップ</a></li>
+        <li><a href="">このサイトについて</a></li>
+        <li><a href="">プライバシーポリシー</a></li>
+        <li><a href="">会社概要</a></li>
+        </ul>
+
+    </nav><!-- f-nav -->
+
+    <a href="#"><img src="img/logo2.png" alt="よこはま水族館ロゴ" class="f-logo"></a>
+
+    <p>copyright &copy; YOKOHAMA AQUARIUM All Right Reserved.</p>
+
+
+</footer>
+
+</body>
+</html>
