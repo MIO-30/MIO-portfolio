@@ -3,7 +3,7 @@
 const indexBtn = document.querySelectorAll('#index-menu a');
 
 const imgList = [
-    'img/illust-1.png',
+    'img/illust/illust-1.png',
     'img/kurage.jpg',
     'img/my.jpg'
 ];
